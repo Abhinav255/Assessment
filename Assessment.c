@@ -59,12 +59,20 @@ void main()
  	printf("Do you want to place more Orders?\nPress Y to place more orders\nPress N to confirm your order:");
  	char c;
 
+	re2:
 	scanf(" %c", &c);
     if(c=='y' || c=='Y')
     {
     goto restart;
     }
-	 
-	 
+	else if(c=='n' || c=='N')
+	{
+		printf(" Qty:%d Total Amount:%d",b,amount);
+	 } 
+	 else
+	 {
+	 	printf("enter Y or N");
+	 	goto re2;
+	 }
 	
 }
