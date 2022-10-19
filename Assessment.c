@@ -1,12 +1,12 @@
 #include<stdio.h>
 void main()
 {
-	int a,b,amount;
+	int a,b,amount,g=0,total_amount=0;
 	restart:
 	printf("1.Pizza                 price = 180Rs/pcs\n");
 	printf("2.Burger                price = 100Rs/pcs\n");
-	printf("3.Idli                  price = 120Rs/pcs\n");
-	printf("4.Dosa                  price = 50Rs/pcs\n");
+	printf("3.Igli                  price = 120Rs/pcs\n");
+	printf("4.dosa                  price = 50Rs/pcs\n");
 	printf("\nPlease Enter your choice....:");
 	scanf("%d",&a);
 	
@@ -36,9 +36,10 @@ void main()
 	{
 		printf("\nEnter the quantity:");
 		scanf("%d",&b);
+		g=g+b;
 		
 	}
- 
+    printf("%d\n",g);
  	if(a==1)
  	{
  	amount=180*b;	
@@ -55,10 +56,11 @@ void main()
  	{
  	amount=50*b;	
  	}
- 	printf("Total Amount = %d\n",amount);
+ 	total_amount=total_amount+amount;
+ 	printf("Total Amount = %d\n",total_amount);
  	printf("Do you want to place more Orders?\nPress Y to place more orders\nPress N to confirm your order:");
  	char c;
-
+	
 	re2:
 	scanf(" %c", &c);
     if(c=='y' || c=='Y')
@@ -67,7 +69,7 @@ void main()
     }
 	else if(c=='n' || c=='N')
 	{
-		printf(" Qty:%d Total Amount:%d",b,amount);
+		printf("\n Qty:%d Total Amount:%d",g,total_amount);
 	 } 
 	 else
 	 {
